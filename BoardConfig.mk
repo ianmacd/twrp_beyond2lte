@@ -31,7 +31,8 @@ TARGET_NO_RADIOIMAGE := true
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_PREBUILT_KERNEL := device/samsung/beyond2lte/prebuilt/Image.gz-kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPRI17C001RU
+
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --header_version 1 --board SRPRI17C001RU
 
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
@@ -88,4 +89,6 @@ TW_USE_TOOLBOX := true
 TW_EXCLUDE_TWRPAPP := true
 TW_NO_LEGACY_PROPS := true
 BOARD_SUPPRESS_SECURE_ERASE := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_PREBUILT_DTBOIMAGE := device/samsung/beyond2lte/prebuilt/recovery_dtbo
 TW_DEVICE_VERSION := 1_ianmacd
